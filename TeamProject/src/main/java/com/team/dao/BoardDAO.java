@@ -54,11 +54,12 @@ public class BoardDAO {
 				BoardVO data = new BoardVO();
 				data.setId(rs.getInt("id"));
 				data.setCategory(rs.getString("category"));
+				data.setName(rs.getString("name"));
 				data.setWriter(rs.getString("writer"));
-				data.setWritedate("writedate");
+				data.setWritedate(rs.getString("writedate"));
 				data.setVisitdate(rs.getString("visitdate"));
-				data.setContent(rs.getString("score"));
-				data.setContent(rs.getString("image"));
+				data.setScore(rs.getInt("score"));
+				data.setImage(rs.getString("image"));
 				data.setContent(rs.getString("content"));
 				data.setPw(rs.getString("pw"));
 				return data;
